@@ -4,6 +4,8 @@ import Foundation
 ///
 /// Keeping them in one place stops the tests from depending on visible copy that will be
 /// localized in step 20.
+/// Attach identifiers to the semantic element being queried. An identifier on a
+/// transparent Group or banner stack can override the identifiers of its children.
 enum AccessibilityID {
     static let demoBannerStamp = "demo.banner.stamp"
 

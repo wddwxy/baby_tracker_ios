@@ -199,7 +199,7 @@ python scripts/verify-build-artifacts.py --app-bundle <path-to-.app>   # 额外�
 - **没有 App 图标**：`AppIcon.appiconset` 只有占位 `Contents.json`，构建会有 AppIcon 资源警告，属预期。
 - **未实现连接**：`ConnectionController.connect()` 在校验地址后返回 `notAvailableInThisBuild`，不会假装成功。
 - **UI 测试键盘**：在少数模拟器上文本输入可能受软键盘影响而偶发失败；必要时改用硬件键盘设置或重跑。
-- **本机无法编译**：当前 Windows 环境没有 Swift/Xcode，Swift 代码与 `project.pbxproj` 只做过结构校验，未真正编译。
+- **本机无法编译**：当前 Windows 环境没有 Swift/Xcode；已通过 GitHub macOS/Xcode 在线编译，以及 53 个单元测试和 16 个 UI 测试（2026-10-21，[验证记录](https://github.com/wddwxy/baby_tracker_ios/actions/runs/39670079090)）。
 - **默认 Bundle ID**：`com.wddwxy.littlenest` 只是占位，真机安装前请改成你自己的。
 
 ## 步骤 01 的范围（不包含）
