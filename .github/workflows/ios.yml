@@ -1,0 +1,98 @@
+name: iOS build and tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  source-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check synthetic fixtures
+        run: python scripts/check-fixtures.py
+      - name: Check source and configuration
+        run: python scripts/verify-build-artifacts.py
+      - name: Check shell syntax
+        run: bash -n scripts/build-simulator.sh scripts/test-simulator.sh
+
+  simulator:
+    needs: source-checks
+    runs-on: macos-15
+    timeout-minutes: 35
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Record build environment
+        run: |
+          mkdir -p build
+          {
+            sw_vers
+            xcodebuild -version
+            xcodebuild -showsdks
+            swift --version
+          } | tee build/environment.txt
+      - name: Select an available iPhone simulator
+        run: |
+          python3 scripts/select-simulator.py >> "$GITHUB_ENV"
+          xcrun simctl list devices available > build/simulators.txt
+      - name: Build without signing
+        shell: bash
+        run: |
+          set -o pipefail
+          bash scripts/build-simulator.sh 2>&1 | tee build/build.log
+      - name: Check built app
+        run: python3 scripts/verify-build-artifacts.py --app-bundle build/DerivedData/Build/Products/Debug-iphonesimulator/LittleNest.app
+      - name: Boot simulator
+        run: |
+          xcrun simctl boot "$SIMULATOR_UDID"
+          xcrun simctl bootstatus "$SIMULATOR_UDID" -b
+      - name: Run unit and UI tests
+        shell: bash
+        run: |
+          set -o pipefail
+          bash scripts/test-simulator.sh -parallel-testing-enabled NO -resultBundlePath "$PWD/build/Tests.xcresult" 2>&1 | tee build/test.log
+      - name: Capture demo screenshot and package simulator app
+        run: |
+          xcrun simctl install "$SIMULATOR_UDID" build/DerivedData/Build/Products/Debug-iphonesimulator/LittleNest.app
+          xcrun simctl launch --terminate-running-process "$SIMULATOR_UDID" com.wddwxy.littlenest -LittleNestMode demo -LittleNestDemoDataset F1
+          sleep 3
+          xcrun simctl io "$SIMULATOR_UDID" screenshot build/demo.png
+          ditto -c -k --sequesterRsrc --keepParent build/DerivedData/Build/Products/Debug-iphonesimulator/LittleNest.app build/LittleNest-simulator.zip
+      - name: Upload logs and test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-validation-${{ github.run_number }}
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            build/environment.txt
+            build/simulators.txt
+            build/*.log
+            build/Tests.xcresult
+            build/demo.png
+      - name: Upload simulator app
+        uses: actions/upload-artifact@v4
+        with:
+          name: LittleNest-simulator-${{ github.run_number }}
+          retention-days: 7
+          path: build/LittleNest-simulator.zip

@@ -1,0 +1,29 @@
+// Shared, machine-independent build settings for the Little Nest iOS prototype.
+//
+// This file must stay free of absolute paths, tokens and credentials so a clean
+// checkout builds on any Mac (plan test 01-01).
+//
+// Personal values (Apple developer team, bundle identifier) live in
+// Config/Signing.local.xcconfig, which is git-ignored. Copy
+// Config/Signing.local.xcconfig.example to create it.
+
+// Interactive Live Activity buttons (plan steps 11-12) require iOS 17.
+IPHONEOS_DEPLOYMENT_TARGET = 17.0
+
+SWIFT_VERSION = 5.0
+SWIFT_STRICT_CONCURRENCY = minimal
+SWIFT_EMIT_LOC_STRINGS = YES
+
+CLANG_ENABLE_MODULES = YES
+CLANG_ENABLE_OBJC_ARC = YES
+ENABLE_STRICT_OBJC_MSGSEND = YES
+ALWAYS_SEARCH_USER_PATHS = NO
+
+// Automatic signing. An empty team is valid for simulator builds; device builds
+// (plan test 01-02) need a real team from Signing.local.xcconfig.
+CODE_SIGN_STYLE = Automatic
+LITTLE_NEST_DEVELOPMENT_TEAM =
+LITTLE_NEST_BUNDLE_ID = com.wddwxy.littlenest
+
+// Local overrides win because this include is last.
+#include? "Signing.local.xcconfig"

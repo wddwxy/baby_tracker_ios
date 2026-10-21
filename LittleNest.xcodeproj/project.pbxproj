@@ -1,0 +1,825 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB0000000000000000000032 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000031 /* AppEnvironment.swift */; };
+		AB0000000000000000000034 /* AppMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000033 /* AppMode.swift */; };
+		AB0000000000000000000036 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000035 /* AppRootView.swift */; };
+		AB0000000000000000000038 /* LaunchOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000037 /* LaunchOptions.swift */; };
+		AB000000000000000000003A /* LittleNestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000039 /* LittleNestApp.swift */; };
+		AB000000000000000000003C /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000003B /* RootTabView.swift */; };
+		AB000000000000000000003E /* AddressValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000003D /* AddressValidator.swift */; };
+		AB0000000000000000000040 /* ConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000003F /* ConnectionController.swift */; };
+		AB0000000000000000000042 /* ConnectionProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000041 /* ConnectionProblem.swift */; };
+		AB0000000000000000000044 /* ConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000043 /* ConnectionState.swift */; };
+		AB0000000000000000000046 /* DemoDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000045 /* DemoDataProvider.swift */; };
+		AB0000000000000000000048 /* DemoDatasetID.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000047 /* DemoDatasetID.swift */; };
+		AB000000000000000000004A /* DemoFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000049 /* DemoFixtures.swift */; };
+		AB000000000000000000004C /* DemoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000004B /* DemoModels.swift */; };
+		AB000000000000000000004E /* ElapsedFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000004D /* ElapsedFormatter.swift */; };
+		AB0000000000000000000050 /* FixedStampFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000004F /* FixedStampFormatter.swift */; };
+		AB0000000000000000000052 /* EntryGrouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000051 /* EntryGrouping.swift */; };
+		AB0000000000000000000054 /* TimeSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000053 /* TimeSource.swift */; };
+		AB0000000000000000000056 /* ConnectionProblemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000055 /* ConnectionProblemCard.swift */; };
+		AB0000000000000000000058 /* ConnectionSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000057 /* ConnectionSetupView.swift */; };
+		AB000000000000000000005A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000059 /* HistoryView.swift */; };
+		AB000000000000000000005C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000005B /* HomeView.swift */; };
+		AB000000000000000000005E /* DiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000005D /* DiagnosticsView.swift */; };
+		AB0000000000000000000060 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000005F /* SettingsView.swift */; };
+		AB0000000000000000000062 /* TrendsPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000061 /* TrendsPlaceholderView.swift */; };
+		AB0000000000000000000064 /* AccessibilityID.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000063 /* AccessibilityID.swift */; };
+		AB0000000000000000000065 /* AccessibilityID.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000063 /* AccessibilityID.swift */; };
+		AB0000000000000000000067 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000066 /* AppInfo.swift */; };
+		AB0000000000000000000069 /* DemoModeBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000068 /* DemoModeBanner.swift */; };
+		AB000000000000000000006B /* EntryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000006A /* EntryRow.swift */; };
+		AB000000000000000000006D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000006C /* Assets.xcassets */; };
+		AB000000000000000000006F /* AddressValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000006E /* AddressValidatorTests.swift */; };
+		AB0000000000000000000071 /* AppEnvironmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000070 /* AppEnvironmentTests.swift */; };
+		AB0000000000000000000073 /* ConnectionControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000072 /* ConnectionControllerTests.swift */; };
+		AB0000000000000000000075 /* DemoFixturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000074 /* DemoFixturesTests.swift */; };
+		AB0000000000000000000077 /* ElapsedFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000076 /* ElapsedFormatterTests.swift */; };
+		AB0000000000000000000079 /* EntryGroupingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000078 /* EntryGroupingTests.swift */; };
+		AB000000000000000000007B /* LaunchOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000007A /* LaunchOptionsTests.swift */; };
+		AB000000000000000000007D /* ConnectionSetupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000007C /* ConnectionSetupUITests.swift */; };
+		AB000000000000000000007F /* DemoModeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB000000000000000000007E /* DemoModeUITests.swift */; };
+		AB0000000000000000000081 /* ShellLaunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000080 /* ShellLaunchUITests.swift */; };
+		AB0000000000000000000083 /* XCUIApplication+LittleNest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000082 /* XCUIApplication+LittleNest.swift */; };
+		AB0000000000000000000085 /* F0.json in Resources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000084 /* F0.json */; };
+		AB0000000000000000000087 /* F1.json in Resources */ = {isa = PBXBuildFile; fileRef = AB0000000000000000000086 /* F1.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB0000000000000000000010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB0000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB0000000000000000000004;
+			remoteInfo = LittleNest;
+		};
+		AB0000000000000000000011 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB0000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB0000000000000000000004;
+			remoteInfo = LittleNest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB0000000000000000000007 /* LittleNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0000000000000000000008 /* LittleNestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleNestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0000000000000000000009 /* LittleNestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleNestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0000000000000000000031 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		AB0000000000000000000033 /* AppMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMode.swift; sourceTree = "<group>"; };
+		AB0000000000000000000035 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000037 /* LaunchOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchOptions.swift; sourceTree = "<group>"; };
+		AB0000000000000000000039 /* LittleNestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleNestApp.swift; sourceTree = "<group>"; };
+		AB000000000000000000003B /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		AB000000000000000000003D /* AddressValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressValidator.swift; sourceTree = "<group>"; };
+		AB000000000000000000003F /* ConnectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionController.swift; sourceTree = "<group>"; };
+		AB0000000000000000000041 /* ConnectionProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionProblem.swift; sourceTree = "<group>"; };
+		AB0000000000000000000043 /* ConnectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionState.swift; sourceTree = "<group>"; };
+		AB0000000000000000000045 /* DemoDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDataProvider.swift; sourceTree = "<group>"; };
+		AB0000000000000000000047 /* DemoDatasetID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDatasetID.swift; sourceTree = "<group>"; };
+		AB0000000000000000000049 /* DemoFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFixtures.swift; sourceTree = "<group>"; };
+		AB000000000000000000004B /* DemoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModels.swift; sourceTree = "<group>"; };
+		AB000000000000000000004D /* ElapsedFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedFormatter.swift; sourceTree = "<group>"; };
+		AB000000000000000000004F /* FixedStampFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedStampFormatter.swift; sourceTree = "<group>"; };
+		AB0000000000000000000051 /* EntryGrouping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryGrouping.swift; sourceTree = "<group>"; };
+		AB0000000000000000000053 /* TimeSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSource.swift; sourceTree = "<group>"; };
+		AB0000000000000000000055 /* ConnectionProblemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionProblemCard.swift; sourceTree = "<group>"; };
+		AB0000000000000000000057 /* ConnectionSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSetupView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000059 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		AB000000000000000000005B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AB000000000000000000005D /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
+		AB000000000000000000005F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000061 /* TrendsPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsPlaceholderView.swift; sourceTree = "<group>"; };
+		AB0000000000000000000063 /* AccessibilityID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityID.swift; sourceTree = "<group>"; };
+		AB0000000000000000000066 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		AB0000000000000000000068 /* DemoModeBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModeBanner.swift; sourceTree = "<group>"; };
+		AB000000000000000000006A /* EntryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRow.swift; sourceTree = "<group>"; };
+		AB000000000000000000006C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB000000000000000000006E /* AddressValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressValidatorTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000070 /* AppEnvironmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironmentTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000072 /* ConnectionControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionControllerTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000074 /* DemoFixturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFixturesTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000076 /* ElapsedFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedFormatterTests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000078 /* EntryGroupingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryGroupingTests.swift; sourceTree = "<group>"; };
+		AB000000000000000000007A /* LaunchOptionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchOptionsTests.swift; sourceTree = "<group>"; };
+		AB000000000000000000007C /* ConnectionSetupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSetupUITests.swift; sourceTree = "<group>"; };
+		AB000000000000000000007E /* DemoModeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModeUITests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000080 /* ShellLaunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellLaunchUITests.swift; sourceTree = "<group>"; };
+		AB0000000000000000000082 /* XCUIApplication+LittleNest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIApplication+LittleNest.swift; sourceTree = "<group>"; };
+		AB0000000000000000000084 /* F0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = F0.json; sourceTree = "<group>"; };
+		AB0000000000000000000086 /* F1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = F1.json; sourceTree = "<group>"; };
+		AB0000000000000000000088 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		AB0000000000000000000089 /* Signing.local.xcconfig.example */ = {isa = PBXFileReference; lastKnownFileType = text; path = Signing.local.xcconfig.example; sourceTree = "<group>"; };
+		AB000000000000000000008A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AB000000000000000000008B /* ENVIRONMENT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ENVIRONMENT.md; sourceTree = "<group>"; };
+		AB000000000000000000008C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB0000000000000000000013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB0000000000000000000016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB0000000000000000000019 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB0000000000000000000002 /* LittleNest */ = {
+			isa = PBXGroup;
+			children = (
+				AB000000000000000000001F /* Sources */,
+				AB000000000000000000001E /* Tests */,
+				AB0000000000000000000023 /* Config */,
+				AB000000000000000000008A /* README.md */,
+				AB000000000000000000008B /* ENVIRONMENT.md */,
+			);
+			name = LittleNest;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000007 /* LittleNest.app */,
+				AB0000000000000000000008 /* LittleNestTests.xctest */,
+				AB0000000000000000000009 /* LittleNestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000023 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000088 /* Base.xcconfig */,
+				AB0000000000000000000089 /* Signing.local.xcconfig.example */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		AB000000000000000000001F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AB000000000000000000002E /* App */,
+				AB000000000000000000001D /* Core */,
+				AB000000000000000000002D /* Domain */,
+				AB000000000000000000002A /* Features */,
+				AB0000000000000000000028 /* Shared */,
+				AB000000000000000000001B /* Resources */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AB000000000000000000002E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000031 /* AppEnvironment.swift */,
+				AB0000000000000000000033 /* AppMode.swift */,
+				AB0000000000000000000035 /* AppRootView.swift */,
+				AB0000000000000000000037 /* LaunchOptions.swift */,
+				AB0000000000000000000039 /* LittleNestApp.swift */,
+				AB000000000000000000003B /* RootTabView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AB000000000000000000001D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000024 /* Connection */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000024 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				AB000000000000000000003D /* AddressValidator.swift */,
+				AB000000000000000000003F /* ConnectionController.swift */,
+				AB0000000000000000000041 /* ConnectionProblem.swift */,
+				AB0000000000000000000043 /* ConnectionState.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		AB000000000000000000002D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000030 /* Demo */,
+				AB0000000000000000000025 /* Formatting */,
+				AB0000000000000000000026 /* Grouping */,
+				AB0000000000000000000021 /* Time */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000030 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000045 /* DemoDataProvider.swift */,
+				AB0000000000000000000047 /* DemoDatasetID.swift */,
+				AB0000000000000000000049 /* DemoFixtures.swift */,
+				AB000000000000000000004B /* DemoModels.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000025 /* Formatting */ = {
+			isa = PBXGroup;
+			children = (
+				AB000000000000000000004D /* ElapsedFormatter.swift */,
+				AB000000000000000000004F /* FixedStampFormatter.swift */,
+			);
+			path = Formatting;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000026 /* Grouping */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000051 /* EntryGrouping.swift */,
+			);
+			path = Grouping;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000021 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000053 /* TimeSource.swift */,
+			);
+			path = Time;
+			sourceTree = "<group>";
+		};
+		AB000000000000000000002A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AB000000000000000000002B /* Connection */,
+				AB000000000000000000001C /* History */,
+				AB000000000000000000002F /* Home */,
+				AB0000000000000000000027 /* Settings */,
+				AB000000000000000000002C /* Trends */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AB000000000000000000002B /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000055 /* ConnectionProblemCard.swift */,
+				AB0000000000000000000057 /* ConnectionSetupView.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		AB000000000000000000001C /* History */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000059 /* HistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		AB000000000000000000002F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AB000000000000000000005B /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000027 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AB000000000000000000005D /* DiagnosticsView.swift */,
+				AB000000000000000000005F /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AB000000000000000000002C /* Trends */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000061 /* TrendsPlaceholderView.swift */,
+			);
+			path = Trends;
+			sourceTree = "<group>";
+		};
+		AB000000000000000000001B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB000000000000000000006C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000028 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000063 /* AccessibilityID.swift */,
+				AB0000000000000000000066 /* AppInfo.swift */,
+				AB0000000000000000000068 /* DemoModeBanner.swift */,
+				AB000000000000000000006A /* EntryRow.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AB000000000000000000001E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000020 /* Unit */,
+				AB0000000000000000000022 /* UI */,
+				AB0000000000000000000029 /* Fixtures */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000029 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				AB0000000000000000000084 /* F0.json */,
+				AB0000000000000000000086 /* F1.json */,
+				AB000000000000000000008C /* README.md */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000022 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AB000000000000000000007C /* ConnectionSetupUITests.swift */,
+				AB000000000000000000007E /* DemoModeUITests.swift */,
+				AB0000000000000000000080 /* ShellLaunchUITests.swift */,
+				AB0000000000000000000082 /* XCUIApplication+LittleNest.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AB0000000000000000000020 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				AB000000000000000000006E /* AddressValidatorTests.swift */,
+				AB0000000000000000000070 /* AppEnvironmentTests.swift */,
+				AB0000000000000000000072 /* ConnectionControllerTests.swift */,
+				AB0000000000000000000074 /* DemoFixturesTests.swift */,
+				AB0000000000000000000076 /* ElapsedFormatterTests.swift */,
+				AB0000000000000000000078 /* EntryGroupingTests.swift */,
+				AB000000000000000000007A /* LaunchOptionsTests.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB0000000000000000000004 /* LittleNest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB000000000000000000000B /* Build configuration list for PBXNativeTarget "LittleNest" */;
+			buildPhases = (
+				AB0000000000000000000012 /* Sources */,
+				AB0000000000000000000013 /* Frameworks */,
+				AB0000000000000000000014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LittleNest;
+			productName = LittleNest;
+			productReference = AB0000000000000000000007 /* LittleNest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB0000000000000000000005 /* LittleNestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB000000000000000000000C /* Build configuration list for PBXNativeTarget "LittleNestTests" */;
+			buildPhases = (
+				AB0000000000000000000015 /* Sources */,
+				AB0000000000000000000016 /* Frameworks */,
+				AB0000000000000000000017 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB000000000000000000000E /* PBXTargetDependency */,
+			);
+			name = LittleNestTests;
+			productName = LittleNestTests;
+			productReference = AB0000000000000000000008 /* LittleNestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB0000000000000000000006 /* LittleNestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB000000000000000000000D /* Build configuration list for PBXNativeTarget "LittleNestUITests" */;
+			buildPhases = (
+				AB0000000000000000000018 /* Sources */,
+				AB0000000000000000000019 /* Frameworks */,
+				AB000000000000000000001A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB000000000000000000000F /* PBXTargetDependency */,
+			);
+			name = LittleNestUITests;
+			productName = LittleNestUITests;
+			productReference = AB0000000000000000000009 /* LittleNestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					AB0000000000000000000004 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					AB0000000000000000000005 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = AB0000000000000000000004;
+					};
+					AB0000000000000000000006 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = AB0000000000000000000004;
+					};
+				};
+			};
+			buildConfigurationList = AB000000000000000000000A /* Build configuration list for PBXProject "LittleNest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB0000000000000000000002;
+			productRefGroup = AB0000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB0000000000000000000004 /* LittleNest */,
+				AB0000000000000000000005 /* LittleNestTests */,
+				AB0000000000000000000006 /* LittleNestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB0000000000000000000014 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB000000000000000000006D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB0000000000000000000017 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB0000000000000000000085 /* F0.json in Resources */,
+				AB0000000000000000000087 /* F1.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB000000000000000000001A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB0000000000000000000012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB0000000000000000000032 /* AppEnvironment.swift in Sources */,
+				AB0000000000000000000034 /* AppMode.swift in Sources */,
+				AB0000000000000000000036 /* AppRootView.swift in Sources */,
+				AB0000000000000000000038 /* LaunchOptions.swift in Sources */,
+				AB000000000000000000003A /* LittleNestApp.swift in Sources */,
+				AB000000000000000000003C /* RootTabView.swift in Sources */,
+				AB000000000000000000003E /* AddressValidator.swift in Sources */,
+				AB0000000000000000000040 /* ConnectionController.swift in Sources */,
+				AB0000000000000000000042 /* ConnectionProblem.swift in Sources */,
+				AB0000000000000000000044 /* ConnectionState.swift in Sources */,
+				AB0000000000000000000046 /* DemoDataProvider.swift in Sources */,
+				AB0000000000000000000048 /* DemoDatasetID.swift in Sources */,
+				AB000000000000000000004A /* DemoFixtures.swift in Sources */,
+				AB000000000000000000004C /* DemoModels.swift in Sources */,
+				AB000000000000000000004E /* ElapsedFormatter.swift in Sources */,
+				AB0000000000000000000050 /* FixedStampFormatter.swift in Sources */,
+				AB0000000000000000000052 /* EntryGrouping.swift in Sources */,
+				AB0000000000000000000054 /* TimeSource.swift in Sources */,
+				AB0000000000000000000056 /* ConnectionProblemCard.swift in Sources */,
+				AB0000000000000000000058 /* ConnectionSetupView.swift in Sources */,
+				AB000000000000000000005A /* HistoryView.swift in Sources */,
+				AB000000000000000000005C /* HomeView.swift in Sources */,
+				AB000000000000000000005E /* DiagnosticsView.swift in Sources */,
+				AB0000000000000000000060 /* SettingsView.swift in Sources */,
+				AB0000000000000000000062 /* TrendsPlaceholderView.swift in Sources */,
+				AB0000000000000000000064 /* AccessibilityID.swift in Sources */,
+				AB0000000000000000000067 /* AppInfo.swift in Sources */,
+				AB0000000000000000000069 /* DemoModeBanner.swift in Sources */,
+				AB000000000000000000006B /* EntryRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB0000000000000000000015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB000000000000000000006F /* AddressValidatorTests.swift in Sources */,
+				AB0000000000000000000071 /* AppEnvironmentTests.swift in Sources */,
+				AB0000000000000000000073 /* ConnectionControllerTests.swift in Sources */,
+				AB0000000000000000000075 /* DemoFixturesTests.swift in Sources */,
+				AB0000000000000000000077 /* ElapsedFormatterTests.swift in Sources */,
+				AB0000000000000000000079 /* EntryGroupingTests.swift in Sources */,
+				AB000000000000000000007B /* LaunchOptionsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB0000000000000000000018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB0000000000000000000065 /* AccessibilityID.swift in Sources */,
+				AB000000000000000000007D /* ConnectionSetupUITests.swift in Sources */,
+				AB000000000000000000007F /* DemoModeUITests.swift in Sources */,
+				AB0000000000000000000081 /* ShellLaunchUITests.swift in Sources */,
+				AB0000000000000000000083 /* XCUIApplication+LittleNest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB000000000000000000000E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB0000000000000000000004 /* LittleNest */;
+			targetProxy = AB0000000000000000000010 /* PBXContainerItemProxy */;
+		};
+		AB000000000000000000000F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB0000000000000000000004 /* LittleNest */;
+			targetProxy = AB0000000000000000000011 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AB000000000000000000008D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0000000000000000000088 /* Base.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB000000000000000000008E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0000000000000000000088 /* Base.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB000000000000000000008F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0000000000000000000088 /* Base.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "$(LITTLE_NEST_DEVELOPMENT_TEAM)";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "用于在本地网络中连接你的 Home Assistant 实例。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(LITTLE_NEST_BUNDLE_ID)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB0000000000000000000090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0000000000000000000088 /* Base.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "$(LITTLE_NEST_DEVELOPMENT_TEAM)";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "用于在本地网络中连接你的 Home Assistant 实例。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(LITTLE_NEST_BUNDLE_ID)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AB0000000000000000000091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0000000000000000000088 /* Base.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "$(LITTLE_NEST_DEVELOPMENT_TEAM)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(LITTLE_NEST_BUNDLE_ID).tests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LittleNest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LittleNest";
+			};
+			name = Debug;
+		};
+		AB0000000000000000000092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0000000000000000000088 /* Base.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "$(LITTLE_NEST_DEVELOPMENT_TEAM)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(LITTLE_NEST_BUNDLE_ID).tests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LittleNest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LittleNest";
+			};
+			name = Release;
+		};
+		AB0000000000000000000093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0000000000000000000088 /* Base.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "$(LITTLE_NEST_DEVELOPMENT_TEAM)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(LITTLE_NEST_BUNDLE_ID).uitests";
+				TEST_TARGET_NAME = LittleNest;
+			};
+			name = Debug;
+		};
+		AB0000000000000000000094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB0000000000000000000088 /* Base.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "$(LITTLE_NEST_DEVELOPMENT_TEAM)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(LITTLE_NEST_BUNDLE_ID).uitests";
+				TEST_TARGET_NAME = LittleNest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB000000000000000000000A /* Build configuration list for PBXProject "LittleNest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB000000000000000000008D /* Debug */,
+				AB000000000000000000008E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB000000000000000000000B /* Build configuration list for PBXNativeTarget "LittleNest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB000000000000000000008F /* Debug */,
+				AB0000000000000000000090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB000000000000000000000C /* Build configuration list for PBXNativeTarget "LittleNestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB0000000000000000000091 /* Debug */,
+				AB0000000000000000000092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB000000000000000000000D /* Build configuration list for PBXNativeTarget "LittleNestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB0000000000000000000093 /* Debug */,
+				AB0000000000000000000094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = AB0000000000000000000001 /* Project object */;
+}

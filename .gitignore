@@ -1,0 +1,30 @@
+# Xcode / build artifacts. Never commit.
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM
+*.dSYM.zip
+.swiftpm/
+
+# Personal signing and bundle-identifier overrides.
+# Start from Config/Signing.local.xcconfig.example.
+Config/Signing.local.xcconfig
+
+# Isolated backend data, secrets and local tool state.
+.ios-test-data/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.p12
+*.p8
+*.pem
+*.mobileprovision
+*.xcarchive/
+.DS_Store

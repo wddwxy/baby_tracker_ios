@@ -1,0 +1,11 @@
+// Copy this file to Config/Signing.local.xcconfig and fill in your own values.
+// Config/Signing.local.xcconfig is git-ignored and must never be committed.
+//
+// Simulator builds work with the empty defaults in Config/Base.xcconfig.
+// Real-device builds (plan test 01-02) need a real Apple developer team.
+
+// Your Apple Developer team identifier, for example ABCDE12345.
+LITTLE_NEST_DEVELOPMENT_TEAM =
+
+// Bundle identifier owned by your team. It must match the entitlements you sign with.
+LITTLE_NEST_BUNDLE_ID = com.example.littlenest

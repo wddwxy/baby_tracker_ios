@@ -1,0 +1,71 @@
+{
+  "id": "f1",
+  "capturedAt": "2026-10-16T01:00:00Z",
+  "timeZoneIdentifier": "Asia/Shanghai",
+  "profile": {
+    "name": "演示宝宝",
+    "dateOfBirth": "2026-04-20T01:00:00Z"
+  },
+  "settings": {
+    "volumeUnit": "millilitre",
+    "caregiverName": "演示照护者"
+  },
+  "recentEntries": [
+    {
+      "id": "f1-diaper-1",
+      "kind": "diaper",
+      "occurredAt": "2026-10-16T00:25:00Z",
+      "title": "尿布 · 湿",
+      "detail": "未记录颜色与质地"
+    },
+    {
+      "id": "f1-bottle-1",
+      "kind": "bottle",
+      "occurredAt": "2026-10-15T22:55:00Z",
+      "title": "奶瓶 · 配方奶 120 ml",
+      "detail": "来源：配方奶"
+    },
+    {
+      "id": "f1-breastfeeding-1",
+      "kind": "breastfeeding",
+      "occurredAt": "2026-10-15T20:50:00Z",
+      "title": "母乳 · 左侧 12 分钟",
+      "detail": "左 12 分钟 / 右 0 分钟"
+    },
+    {
+      "id": "f1-sleep-1",
+      "kind": "sleep",
+      "occurredAt": "2026-10-15T18:00:00Z",
+      "title": "睡眠 · 1 小时 20 分钟",
+      "detail": "夜睡"
+    },
+    {
+      "id": "f1-pump-1",
+      "kind": "pump",
+      "occurredAt": "2026-10-15T16:00:00Z",
+      "title": "吸奶 · 总量 160 ml",
+      "detail": "左 90 ml / 右 70 ml"
+    },
+    {
+      "id": "f1-solids-1",
+      "kind": "solids",
+      "occurredAt": "2026-10-15T14:00:00Z",
+      "title": "辅食 · 米糊",
+      "detail": "餐次：早餐"
+    },
+    {
+      "id": "f1-growth-1",
+      "kind": "growth",
+      "occurredAt": "2026-10-13T01:00:00Z",
+      "title": "成长 · 体重 6.42 kg",
+      "detail": "身长 62.0 cm"
+    },
+    {
+      "id": "f1-health-1",
+      "kind": "health",
+      "occurredAt": "2026-10-10T01:00:00Z",
+      "title": "健康 · 疫苗接种",
+      "detail": "记录在案"
+    }
+  ]
+}
