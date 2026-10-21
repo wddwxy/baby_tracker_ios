@@ -25,7 +25,6 @@ struct HistoryView: View {
             }
         }
         .navigationTitle("记录")
-        .accessibilityIdentifier(AccessibilityID.historyRoot)
     }
 }
 

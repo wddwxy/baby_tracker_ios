@@ -23,6 +23,5 @@ struct DemoModeBanner: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 6)
         .background(Color.yellow.opacity(0.22))
-        .accessibilityIdentifier(AccessibilityID.demoBanner)
     }
 }

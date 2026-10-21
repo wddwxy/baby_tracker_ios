@@ -17,7 +17,6 @@ struct HomeView: View {
             }
         }
         .navigationTitle("首页")
-        .accessibilityIdentifier(AccessibilityID.homeRoot)
     }
 }
 

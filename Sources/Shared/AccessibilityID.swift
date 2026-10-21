@@ -5,17 +5,14 @@ import Foundation
 /// Keeping them in one place stops the tests from depending on visible copy that will be
 /// localized in step 20.
 enum AccessibilityID {
-    static let demoBanner = "demo.banner"
     static let demoBannerStamp = "demo.banner.stamp"
 
-    static let homeRoot = "home.root"
     static let homeProfileCard = "home.profile"
     static let homeEmptyProfile = "home.empty.profile"
     static let homeEmptyEntries = "home.empty.entries"
     static let homeUnconnected = "home.unconnected"
     static let homeOpenConnection = "home.openConnection"
 
-    static let historyRoot = "history.root"
     static let historyUnconnected = "history.unconnected"
 
     static let trendsRoot = "trends.root"

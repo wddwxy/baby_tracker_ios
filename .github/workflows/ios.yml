@@ -67,11 +67,16 @@ jobs:
         run: |
           xcrun simctl boot "$SIMULATOR_UDID"
           xcrun simctl bootstatus "$SIMULATOR_UDID" -b
-      - name: Run unit and UI tests
+      - name: Run unit tests
         shell: bash
         run: |
           set -o pipefail
-          bash scripts/test-simulator.sh -parallel-testing-enabled NO -resultBundlePath "$PWD/build/Tests.xcresult" 2>&1 | tee build/test.log
+          bash scripts/test-simulator.sh -only-testing:LittleNestTests -parallel-testing-enabled NO -resultBundlePath "$PWD/build/UnitTests.xcresult" 2>&1 | tee build/unit-tests.log
+      - name: Run UI tests
+        shell: bash
+        run: |
+          set -o pipefail
+          bash scripts/test-simulator.sh -only-testing:LittleNestUITests -parallel-testing-enabled NO -resultBundlePath "$PWD/build/UITests.xcresult" 2>&1 | tee build/ui-tests.log
       - name: Capture demo screenshot and package simulator app
         run: |
           xcrun simctl install "$SIMULATOR_UDID" build/DerivedData/Build/Products/Debug-iphonesimulator/LittleNest.app
@@ -90,7 +95,7 @@ jobs:
             build/environment.txt
             build/simulators.txt
             build/*.log
-            build/Tests.xcresult
+            build/*.xcresult
             build/demo.png
       - name: Upload simulator app
         uses: actions/upload-artifact@v4

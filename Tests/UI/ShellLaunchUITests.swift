@@ -29,6 +29,16 @@ final class ShellLaunchUITests: XCTestCase {
         XCTAssertFalse(app.identified(AccessibilityID.homeProfileCard).exists)
     }
 
+    func testLiveHistoryAsksForAConnectionInsteadOfInventingRecords() {
+        let app = XCUIApplication.launchLive()
+
+        XCTAssertTrue(app.tab("记录").waitForExistence(timeout: 30))
+        app.tab("记录").tap()
+
+        XCTAssertTrue(app.identified(AccessibilityID.historyUnconnected).waitForExistence(timeout: 10))
+        XCTAssertTrue(app.staticTexts["尚未连接 Home Assistant"].exists)
+    }
+
     func testTrendsTabDoesNotInventCharts() {
         let app = XCUIApplication.launchLive()
 
