@@ -9,6 +9,8 @@
 
 // Interactive Live Activity buttons (plan steps 11-12) require iOS 17.
 IPHONEOS_DEPLOYMENT_TARGET = 17.0
+SDKROOT = iphoneos
+SUPPORTED_PLATFORMS = iphoneos iphonesimulator
 
 SWIFT_VERSION = 5.0
 SWIFT_STRICT_CONCURRENCY = minimal

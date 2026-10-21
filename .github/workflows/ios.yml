@@ -50,6 +50,8 @@ jobs:
             xcodebuild -showsdks
             swift --version
           } | tee build/environment.txt
+      - name: Validate Xcode project syntax
+        run: plutil -lint LittleNest.xcodeproj/project.pbxproj
       - name: Select an available iPhone simulator
         run: |
           python3 scripts/select-simulator.py >> "$GITHUB_ENV"

@@ -114,7 +114,7 @@
 		AB000000000000000000007C /* ConnectionSetupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionSetupUITests.swift; sourceTree = "<group>"; };
 		AB000000000000000000007E /* DemoModeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoModeUITests.swift; sourceTree = "<group>"; };
 		AB0000000000000000000080 /* ShellLaunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellLaunchUITests.swift; sourceTree = "<group>"; };
-		AB0000000000000000000082 /* XCUIApplication+LittleNest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIApplication+LittleNest.swift; sourceTree = "<group>"; };
+		AB0000000000000000000082 /* XCUIApplication+LittleNest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+LittleNest.swift"; sourceTree = "<group>"; };
 		AB0000000000000000000084 /* F0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = F0.json; sourceTree = "<group>"; };
 		AB0000000000000000000086 /* F1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = F1.json; sourceTree = "<group>"; };
 		AB0000000000000000000088 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
