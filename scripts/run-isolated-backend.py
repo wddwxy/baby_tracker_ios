@@ -17,8 +17,8 @@ involved, no Xcode and no Home Assistant.
 
 Examples
 --------
-    python ios/scripts/run-isolated-backend.py --reset
-    python ios/scripts/run-isolated-backend.py --keep-running --port 8099
+    python scripts/run-isolated-backend.py --reset
+    python scripts/run-isolated-backend.py --keep-running --port 8099
 """
 
 from __future__ import annotations
@@ -37,7 +37,7 @@ WORKSPACE_ROOT = IOS_DIR.parent
 TEST_DATA_ROOT = REPO_ROOT / ".ios-test-data"
 
 # Only F0 exists for now: an empty profile with no records, i.e. a fresh database.
-# F1..F6 are seeded by the steps that consume them (see ios/Tests/Fixtures/README.md).
+# F1..F6 are seeded by the steps that consume them (see Tests/Fixtures/README.md).
 SUPPORTED_DATASETS = ("f0",)
 
 

@@ -15,7 +15,7 @@
 `DemoDataset` 的编码结果（日期为 ISO 8601，时间点统一为 `2026-10-16T01:00:00Z`）。
 
 - Swift 单元测试 `DemoFixturesTests` 会解码这两个文件并核对关键不变量。
-- `ios/scripts/check-fixtures.py` 在不依赖 Xcode 的机器上做同样的结构校验。
+- `scripts/check-fixtures.py` 在不依赖 Xcode 的机器上做同样的结构校验。
 
 ## 尚未提供
 

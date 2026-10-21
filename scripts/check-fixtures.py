@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the synthetic fixtures under ``ios/Tests/Fixtures``.
+"""Validate the synthetic fixtures under ``Tests/Fixtures``.
 
 Runs without Xcode, so the fixtures can be checked on the same machine that edits them
 (plan test 01-06 also relies on fixtures being synthetic and self-contained).
@@ -45,7 +45,7 @@ ENTRY_KINDS = {
 }
 
 # What each dataset is supposed to contain. Keep in sync with
-# ios/Sources/Domain/Demo/DemoFixtures.swift and ios/Tests/Fixtures/README.md.
+# Sources/Domain/Demo/DemoFixtures.swift and Tests/Fixtures/README.md.
 EXPECTED = {
     "f0": {"entries": 0, "profile": False},
     "f1": {"entries": 8, "profile": True},

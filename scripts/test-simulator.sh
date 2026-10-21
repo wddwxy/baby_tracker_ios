@@ -4,9 +4,9 @@
 #
 # Requires macOS with Xcode 16 or newer.
 #
-#     ios/scripts/test-simulator.sh
-#     ios/scripts/test-simulator.sh -only-testing:LittleNestTests
-#     ios/scripts/test-simulator.sh -only-testing:LittleNestUITests/DemoModeUITests
+#     scripts/test-simulator.sh
+#     scripts/test-simulator.sh -only-testing:LittleNestTests
+#     scripts/test-simulator.sh -only-testing:LittleNestUITests/DemoModeUITests
 #
 # Unit tests (plan test 01-04) never touch Home Assistant: they run without a session,
 # without credentials and without network access.

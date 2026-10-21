@@ -4,8 +4,8 @@
 #
 # Requires macOS with Xcode 16 or newer. Run from anywhere:
 #
-#     ios/scripts/build-simulator.sh
-#     SIMULATOR_DEVICE="iPhone 16 Pro" ios/scripts/build-simulator.sh
+#     scripts/build-simulator.sh
+#     SIMULATOR_DEVICE="iPhone 16 Pro" scripts/build-simulator.sh
 #
 set -euo pipefail
 
