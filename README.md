@@ -37,6 +37,25 @@ bash scripts/build-simulator.sh
 
 后续将发布说明、协议文档与 iOS 测试资料一起维护在本仓库。HA 后端仍在 [baby_tracker](https://github.com/wddwxy/baby_tracker) 独立维护，不上传本地项目根目录的文件或历史。
 
+## 真机 IPA 与 Sideloadly 本地签名
+
+另有手动 workflow：[Unsigned iPhone IPA](https://github.com/wddwxy/baby_tracker_ios/actions/workflows/ipa.yml)。选择 **Run workflow → main**，成功后下载 `LittleNest-unsigned-iphone-*` artifact 并解压，获得 `LittleNest-unsigned.ipa`。
+
+- 这是 Release / arm64 / iPhoneOS 真机包，最低 iOS 17.0，尚未签名，不能直接点击安装。
+- 构建和下载不需要 Apple 账号、证书或 GitHub Secrets；签名仅在自己的电脑完成。
+- `scripts/check-ipa.py` 校验包结构、Info.plist 平台与 Mach-O 平台/架构，拒绝模拟器包；artifact 附 SHA-256 和源码提交信息。
+- 本机 macOS 也可执行 `bash scripts/build-ipa.sh`；Windows 可以运行 `python scripts/check-ipa.py /path/to/LittleNest-unsigned.ipa` 检查下载文件。
+
+Windows 首次安装：
+
+1. 从 [sideloadly.io](https://sideloadly.io/) 安装 Sideloadly，并按官网要求安装网页版 iTunes/iCloud 组件。
+2. USB 连接并解锁 iPhone，手机上确认信任电脑；确认 iTunes/Sideloadly 可识别设备。
+3. 将解压后的 `.ipa` 拖入 Sideloadly，选择设备和 Apple ID Sideload。Apple 账号、密码和双重认证只在本机输入。
+4. 按提示完成签名/安装；手机开启开发者模式、重启确认，并在“通用 → VPN 与设备管理”信任对应开发者。
+5. 免费账号通常需每 7 天续签；保持同一 Apple 账号和 Bundle ID，以覆盖更新而非先删除 App。自动续签需要电脑后台程序运行，手机通过 USB 或已配对 Wi-Fi 可达。以 [官方 FAQ](https://sideloadly.io/faq) 为准。
+
+当前 App 仍是步骤 01 外壳，默认展示未连接状态；安装成功不表示已有 HA 登录、记录同步或 Live Activity 功能。真机签名和安装须以手机实际成功为准；CI 产出 IPA 不计作真机验收通过。
+
 这是 Little Nest 原生 iOS 计划**步骤 01（构建环境、测试服务与最小 App）** 的产物：
 一个可构建、可安装的 SwiftUI 空壳 App，加上一个隔离的测试后端和一份可复现的环境说明。
 

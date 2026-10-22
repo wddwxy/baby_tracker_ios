@@ -1,0 +1,54 @@
+name: Unsigned iPhone IPA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: device-ipa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  device-ipa:
+    runs-on: macos-15
+    timeout-minutes: 20
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check inputs and build environment
+        run: |
+          mkdir -p build
+          python3 scripts/check-fixtures.py
+          python3 scripts/verify-build-artifacts.py
+          bash -n scripts/build-ipa.sh
+          plutil -lint LittleNest.xcodeproj/project.pbxproj
+          { sw_vers; xcodebuild -version; git rev-parse HEAD; } > build/ipa-environment.txt
+      - name: Build and package unsigned arm64 IPA
+        shell: bash
+        run: |
+          set -o pipefail
+          bash scripts/build-ipa.sh 2>&1 | tee build/device-build.log
+          python3 scripts/check-ipa.py build/LittleNest-unsigned.ipa --metadata build/ipa-metadata.json
+      - name: Upload unsigned IPA for local signing
+        uses: actions/upload-artifact@v4
+        with:
+          name: LittleNest-unsigned-iphone-${{ github.run_number }}
+          retention-days: 7
+          path: |
+            build/LittleNest-unsigned.ipa
+            build/LittleNest-unsigned.ipa.sha256
+            build/ipa-metadata.json
+            build/ipa-environment.txt
+      - name: Upload device build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: device-build-log-${{ github.run_number }}
+          retention-days: 7
+          if-no-files-found: warn
+          path: build/device-build.log
