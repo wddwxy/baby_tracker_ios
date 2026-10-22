@@ -6,10 +6,11 @@
 - CI 配置：`macos-15`、Xcode 16.4、自动发现 iPhone 模拟器、无签名构建。
 - 执行 `build-simulator.sh`、全部单元/UI 测试、构建产物检查；上传环境、日志、`.xcresult`、截图与模拟器 App。
 - 以下历史记录反映建立工程时的本地检查；不等于 CI 通过。首次在线编译和测试以 Actions 运行记录为准。
-- 01-02 真机安装仍待签名/真机；当前 CI 不生成签名 IPA 或执行真机验收。
+- 01-02 真机安装仍待本地签名/真机；当前 CI 只生成未签名 IPA，不执行真机验收。
 - [首次修复后的在线验证](https://github.com/wddwxy/baby_tracker_ios/actions/runs/39667653957)：源码/fixture 检查、Xcode 工程解析、模拟器 App 编译和构建产物检查均通过；单元测试 53/53 通过，UI 测试 13/15 通过。两处 UI 失败是演示时间和首页未连接状态的子级无障碍标识未能被查询到，父级容器的标识覆盖了子级标识。
 - 修复保留原断言，移除透明父级容器标识，并对历史页同类问题增加回归；[修复验证](https://github.com/wddwxy/baby_tracker_ios/actions/runs/39670079090) **全部通过**：53/53 单元测试、16/16 UI 测试；两处原失败和新增历史页回归均通过。测试源码提交为 `3de28e4`。
 - 产物已上传：`ios-validation-3`（日志、UnitTests/UITests.xcresult、demo.png）和 `LittleNest-simulator-3`（模拟器 App）；保留 7 天。
+- [真机 IPA 构建](https://github.com/wddwxy/baby_tracker_ios/actions/runs/39718236379) 已通过，源码提交 `e2379f6`。本地下载后再次验证为 iPhoneOS / arm64 / iOS 17.0+，未签名；SHA-256 `f549b9f0e5c74af585981a3734013e06c2b24b6e708ce94cd7fbdb45e93ac18e`。尚未在用户的 iPhone 17 / iOS 27 上签名安装；不能标为真机测试通过。
 
 本文件记录步骤 01（构建环境、测试服务与最小 App）的**实际执行环境**和**逐条测试结果**。
 按计划要求，执行记录**不得预先填"通过"**；只有真正执行过并留下证据的条目才标为通过。
@@ -88,6 +89,6 @@
 ## 四、尚未验证 / 待办
 
 - Swift 源码与 `project.pbxproj` 已在 GitHub 的 macOS/Xcode 环境编译和测试；本地 Windows 仍没有 Xcode。
-- 真机签名与安装（01-02）仍未验证；当前没有真机 IPA 构建，模拟器 App 不能直接安装到手机。
+- 真机签名与安装（01-02）仍未验证；已提供未签名真机 IPA，模拟器 App 仍不能直接安装到手机。
 - CI 已提供模拟器截图和测试结果；真机、HA 登录及后续平台能力不因模拟器通过而自动视为已验收。
 - 上表中所有 `TODO` 需在目标 Mac 与测试 HA 上补齐后，本文件才算完整。

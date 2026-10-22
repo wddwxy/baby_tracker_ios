@@ -12,7 +12,7 @@
 - [打开构建页面](https://github.com/wddwxy/baby_tracker_ios/actions/workflows/ios.yml)，选择一次运行，在 **Artifacts** 下载日志、`.xcresult`、演示截图和模拟器 `.app` 压缩包（保留 7 天）。
 - CI 自动选择镜像中可用的 iPhone 模拟器，记录 Xcode/SDK/Swift 与设备列表，避免绑定本机模拟器名称。
 - 当前 workflow 不使用任何 HA 账号、真实记录、Apple 证书或 GitHub 自定义 Secrets。
-- **模拟器 `.app` 不能装到真实 iPhone，也不能在 Windows 上直接运行。** 真机 IPA/TestFlight 需要另行配置 Apple 开发者签名、provisioning 和分发流程；本 workflow 不生成可安装 IPA，不上传 App Store。
+- **模拟器 `.app` 不能装到真实 iPhone，也不能在 Windows 上直接运行。** 未签名真机 IPA 使用下方独立 workflow 构建；安装时由本机 Sideloadly 签名。当前不上传 App Store 或 TestFlight。
 - GitHub runner 可代替本地 Mac 做编译/模拟器测试，不能代替 iPhone 真机上的锁屏、权限和网络验收。
 
 在当前工作区中，本目录本身是独立 Git 仓库，父项目忽略 `/ios/`；不是 submodule，也不会改动 HA 后端仓库 remote。在 PowerShell 中：
